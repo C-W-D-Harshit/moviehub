@@ -1,0 +1,143 @@
+.home {
+  z-index: 1 !important;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.home_1 {
+  width: 100%;
+  height: 100%;
+  //   min-height: 100vh;
+  margin-top: -7rem;
+  position: relative;
+}
+
+.home_1_img {
+  width: 100%;
+  height: 100vh;
+  //   margin-top: -7rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  //   backdrop-filter: blur(10px);
+  position: relative;
+  top: 0;
+  z-index: 1;
+  overflow: hidden;
+  > :first-child {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    // backdrop-filter: blur(10px);
+    filter: blur(3px);
+    z-index: 1;
+    transition: 0.7s ease-in-out;
+    // opacity: 0.7;
+  }
+  > .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 2;
+    transition: 0.4s ease-in-out;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.671
+    ); /* Adjust the alpha value for darkness */
+    // transition: opacity 0.5s;
+    pointer-events: none;
+  }
+}
+
+.actImg {
+  background-color: rgba(0, 0, 0, 1) !important;
+  transition: 0.4s ease-in-out !important;
+}
+
+.home_1_bottom {
+  position: absolute;
+  bottom: 3rem;
+  font-size: 2rem;
+  z-index: 4;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  //   height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home_1_arrows {
+  display: flex;
+  align-items: center;
+  > * {
+    width: 15rem;
+    height: 7rem;
+    margin: 0 1rem;
+    border-radius: 1.3rem;
+    border: 2px solid #49484a;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: 500;
+  }
+  > *:hover {
+    background-color: #49484a;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+}
+
+.home_1_actors {
+  > p {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 2.2rem;
+  }
+}
+
+.home_1_mid {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  > :first-child {
+    margin-right: 18rem;
+    > p {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 2.5rem;
+      width: fit-content;
+      min-width: max-content;
+      color: rgb(170, 170, 170);
+    }
+    > Flex {
+      > * {
+        margin: 0 1rem;
+      }
+    }
+  }
+  > :last-child {
+    > :first-child {
+      font-size: 8rem;
+      font-weight: 500;
+      line-height: 9rem;
+      margin-bottom: 1.5rem;
+    }
+    > :last-child {
+      font-size: 2.8rem;
+      font-weight: 400;
+      color: #cccccc;
+    }
+  }
+}
