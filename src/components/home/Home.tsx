@@ -38,6 +38,10 @@ const Dome = ({ data }: { data: any }) => {
       setIsActive(true);
       await new Promise((resolve) => setTimeout(resolve, 0));
       setPage(page - 1);
+    } else {
+      setIsActive(true);
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      setPage(19);
     }
   };
   const right = async () => {
@@ -113,7 +117,6 @@ const Dome = ({ data }: { data: any }) => {
           <button
             onClick={left}
             style={{ borderColor: page > 0 ? "#919191" : "" }}
-            disabled={page === 0}
           >
             <BsArrowLeft />
           </button>
@@ -122,7 +125,6 @@ const Dome = ({ data }: { data: any }) => {
             style={{
               borderColor: page < data?.results.length - 1 ? "#919191" : "",
             }}
-            disabled={page === 19}
           >
             <BsArrowRight />
           </button>
