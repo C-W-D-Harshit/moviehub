@@ -18,9 +18,19 @@ const Dome = ({ data }: { data: any }) => {
       setIsActive(false);
     }, 700);
 
+    const i1 = setInterval(() => {
+      if (page < data?.results.length - 1) {
+        setIsActive(true);
+        setPage(page + 1);
+      } else {
+        setPage(0);
+      }
+    }, 12000);
+
     // Clear the interval when the component unmounts
     return () => {
       clearInterval(interval);
+      clearInterval(i1);
     };
   }, [page]);
   const left = async () => {
@@ -36,7 +46,7 @@ const Dome = ({ data }: { data: any }) => {
       await new Promise((resolve) => setTimeout(resolve, 0));
       setPage(page + 1);
     } else {
-      setPage(19);
+      setPage(0);
     }
   };
   const getCast = async () => {
@@ -60,7 +70,6 @@ const Dome = ({ data }: { data: any }) => {
   if (cast.length === 0) {
     return;
   }
-  console.log(data);
   return (
     <div className="home_1">
       <div className="home_1_img">
@@ -135,7 +144,7 @@ const Dome = ({ data }: { data: any }) => {
             <Avatar size="4" fallback={`+${cast.length - 3}`} radius="full" />
           </div>
         </div>
-        <div className="home_1_arrows">
+        <div className="home_1_arrows" id="gd">
           <button>
             <p style={{ fontSize: "2rem" }}>Details</p>
           </button>

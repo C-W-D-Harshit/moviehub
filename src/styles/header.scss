@@ -40,7 +40,7 @@
   > * {
     margin: 2.2rem;
     font-size: 1.8rem;
-    font-weight: 400;
+    font-weight: 450;
   }
 }
 
@@ -67,5 +67,27 @@
     overflow: hidden;
     overflow-y: auto;
     cursor: pointer;
+  }
+}
+
+.mob_o {
+  display: none;
+  color: #fff;
+  z-index: 1000;
+  font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+  .header__menu {
+    display: none;
+  }
+  .header__search {
+    display: none;
+  }
+  .header__user {
+    display: none;
+  }
+  .mob_o {
+    display: flex;
   }
 }

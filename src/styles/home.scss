@@ -138,6 +138,40 @@
       font-size: 2.8rem;
       font-weight: 400;
       color: #cccccc;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; /* Number of lines to show */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .home_1_mid {
+    flex-direction: column;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    > :last-child {
+      > :first-child {
+        font-size: 5rem;
+        line-height: 6rem;
+      }
+      > :last-child {
+        font-size: 2.4rem;
+        height: 18rem;
+        -webkit-line-clamp: 5;
+      }
+    }
+  }
+  .home_1_bottom {
+    flex-direction: column;
+    bottom: 15rem;
+  }
+  .home_1_actors {
+    display: none;
+  }
+  #gd {
+    display: none;
   }
 }

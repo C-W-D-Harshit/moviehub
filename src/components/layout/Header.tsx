@@ -11,8 +11,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import "@/styles/header.scss";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
-// import Search from "./Search";
-import axios from "axios";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -124,6 +123,7 @@ const Header = () => {
           </DropdownMenu.Content>
         </DropdownMenu.Root>
       </div>
+      <AiOutlineMenu className="mob_o" />
     </div>
   );
 };
