@@ -43,6 +43,9 @@ a {
   .margin {
     padding: 0 1.8rem;
   }
+  body {
+    margin-bottom: 7rem;
+  }
 }
 
 /* Base font size for all devices */
@@ -91,12 +94,12 @@ textarea {
 }
 
 ::-webkit-scrollbar {
-  width: 0.8rem;
-  background-color: #5c59e8;
+  width: 0.7rem;
+  background-color: #49484a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #5c59e8;
+  background-color: #49484a;
   background-image: -webkit-linear-gradient(
     45deg,
     rgba(255, 255, 255, 0.2) 25%,

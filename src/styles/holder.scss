@@ -1,0 +1,59 @@
+.d_hold {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 2rem 0;
+  > :first-child {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    > :first-child {
+      font-size: 2.7rem;
+      font-weight: 500;
+      border-bottom: 1px solid white;
+      padding-bottom: 1rem;
+    }
+  }
+  .d_holder {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x: auto;
+    scrollbar-width: thin !important;
+  }
+  .d_holder::-webkit-scrollbar {
+    width: 1px !important;
+  }
+}
+
+.d_cont {
+  margin: 1rem;
+  width: 25rem;
+  height: 40rem;
+  border-radius: 2rem;
+
+  > :first-child {
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    > :first-child {
+      object-fit: cover;
+      width: inherit;
+      height: inherit;
+      border-radius: inherit;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .d_holder {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+  }
+  .d_holder::-webkit-scrollbar {
+    display: none;
+  }
+}

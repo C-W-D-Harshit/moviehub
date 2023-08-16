@@ -61,11 +61,11 @@ const Header = () => {
   };
   return (
     <div className={scrolled ? "margin header headscroll" : "margin header"}>
-      <div className="header__logo">
+      <Link href={"/"} className="header__logo">
         <p>
           Movie<span>hub</span>
         </p>
-      </div>
+      </Link>
       <div className="header__menu">
         <Link href="/">
           <p>Movies</p>
