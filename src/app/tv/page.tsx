@@ -29,6 +29,7 @@ const page = async () => {
   const data4 = await getData(
     "https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1"
   );
+  const n = 1;
   return (
     <main className="home">
       <Holder data={data1} title={"Airing Today"} />
