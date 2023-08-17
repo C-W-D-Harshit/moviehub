@@ -37,11 +37,6 @@ export default async function Home() {
   const data4 = await getData(
     "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1"
   );
-  if (!data) {
-    return;
-  }
-
-  let num: number = 0;
 
   return (
     <main className="home">

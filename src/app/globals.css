@@ -95,11 +95,11 @@ textarea {
 
 ::-webkit-scrollbar {
   width: 0.7rem;
-  background-color: #49484a;
+  background-color: #18181a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #49484a;
+  background-color: #18181a;
   background-image: -webkit-linear-gradient(
     45deg,
     rgba(255, 255, 255, 0.2) 25%,

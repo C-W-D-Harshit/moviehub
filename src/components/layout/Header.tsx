@@ -67,10 +67,10 @@ const Header = () => {
         </p>
       </Link>
       <div className="header__menu">
-        <Link href="/">
+        <Link href="/movies">
           <p>Movies</p>
         </Link>
-        <Link href="/">
+        <Link href="/tv">
           <p>TV Shows</p>
         </Link>
         <Link href="/">

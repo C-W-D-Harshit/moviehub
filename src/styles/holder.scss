@@ -34,16 +34,23 @@
   width: 25rem;
   height: 40rem;
   border-radius: 2rem;
+  transition: 0.5s ease-in-out;
 
   > :first-child {
     width: inherit;
     height: inherit;
     border-radius: inherit;
+    transition: 0.5s ease-in-out;
+    :hover {
+      scale: 1.05;
+      transition: 0.5s ease-in-out;
+    }
     > :first-child {
       object-fit: cover;
       width: inherit;
       height: inherit;
       border-radius: inherit;
+      transition: 0.5s ease-in-out;
     }
   }
 }
