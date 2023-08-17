@@ -123,7 +123,7 @@ const Header = () => {
           </DropdownMenu.Content>
         </DropdownMenu.Root>
       </div>
-      <AiOutlineMenu className="mob_o" />
+      {/* <AiOutlineMenu className="mob_o" /> */}
     </div>
   );
 };
