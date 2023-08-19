@@ -4,6 +4,7 @@ import { IconButton } from "@radix-ui/themes";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import Dome from "../components/home/Home";
 import Holder from "@/components/home/Holder";
+import { Suspense } from "react";
 
 async function getData(link: string) {
   const headers = new Headers();
@@ -21,10 +22,14 @@ async function getData(link: string) {
   return res.json();
 }
 
-export default async function Home() {
+const Carousel = async () => {
   const data = await getData(
     "https://api.themoviedb.org/3/trending/movie/day?language=en-US"
   );
+  return <Dome data={data} />;
+};
+
+export default async function Home() {
   const data1 = await getData(
     "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1"
   );
@@ -40,7 +45,9 @@ export default async function Home() {
 
   return (
     <main className="home">
-      <Dome data={data} />
+      <Suspense fallback={<div style={{ height: "100vh" }} />}>
+        <Carousel />
+      </Suspense>
       <Holder data={data1} title={"Now Playing"} />
       <Holder data={data2} title={"Popular"} />
       <Holder data={data3} title={"Top Rated"} />

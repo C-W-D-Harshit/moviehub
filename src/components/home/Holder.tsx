@@ -21,6 +21,7 @@ const Holder = ({ data, title }: { data: any; title: string }) => {
                   alt={m.title}
                   width={300}
                   height={400}
+                  blurDataURL={`https://image.tmdb.org/t/p/w185${m.poster_path}`}
                 />
               </Link>
             </div>

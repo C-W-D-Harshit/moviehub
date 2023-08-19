@@ -72,8 +72,25 @@ const Dome = ({ data }: { data: any }) => {
     setCast(dat.cast);
   };
   if (cast.length === 0) {
-    return;
+    return (
+      <div
+        style={{
+          height: "100vh",
+          width: "100%",
+          textAlign: "center",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <h1>Loading...</h1>
+      </div>
+    );
   }
+  if (!data) {
+    return <div style={{ height: "100vh" }} />;
+  }
+  console.log(data);
   return (
     <div className="home_1">
       <div className="home_1_img">
@@ -83,6 +100,7 @@ const Dome = ({ data }: { data: any }) => {
           width={1920}
           height={1080}
           quality={100}
+          blurDataURL={`https://image.tmdb.org/t/p/w185${data.results[page].backdrop_path}`}
         />
         <div className={isActive ? "overlay actImg" : "overlay"} />
       </div>
